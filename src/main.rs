@@ -30,7 +30,7 @@ fn run(dir: &Path) -> Result<(), Box<dyn Error>> {
                 let modified: DateTime<Local> = DateTime::from(metadata.modified()?);
 
                 println!(
-                    "{:>11} | {} | {}",
+                    "{: <10} | {} | {}",
                     "Directory",
                     modified.format("%_d %b %H:%M").to_string(),
                     dirname
@@ -49,7 +49,7 @@ fn run(dir: &Path) -> Result<(), Box<dyn Error>> {
             let modified: DateTime<Local> = DateTime::from(metadata.modified()?);
 
             println!(
-                "{:>5} Bytes | {} | {}",
+                "{: <4} Bytes | {} | {}",
                 size,
                 modified.format("%_d %b %H:%M").to_string(),
                 filename
